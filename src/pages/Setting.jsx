@@ -8,7 +8,6 @@ export default function Setting() {
   const { lang, cl, themess } = useContext(LangContext)
   return (
     <div className="Main">
-      <input type="text" />
       <StyledHeader>Setting</StyledHeader>
       <select
         name=""

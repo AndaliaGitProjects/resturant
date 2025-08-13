@@ -53,9 +53,9 @@
 .active,
 .main-button:hover,
 .main-button:focus-visible {
-  outline: 1px solid var(--Text-white) !important;
-  background-color: var(--button-active) !important;
-  transition: all var(--transiton-button-speed);
+  outline: 2px solid gray !important;
+  background: var(--button-active) !important;
+  transition: transform var(--transiton-button-speed);
   -webkit-backdrop-filter: blur(0.05rem);
   backdrop-filter: blur(0.05rem);
   color: var(--Text-Black) !important;
@@ -110,7 +110,20 @@
   overflow-y: scroll;
   -webkit-backdrop-filter: blur(0.2rem);
   backdrop-filter: blur(0.2rem);
+  /* animation: width-in linear var(--transiton-button-speed); */
 }
+
+/* @keyframes width-in {
+  from {
+    background-color: red;
+    width: 0;
+  }
+  to {
+    background-color: antiquewhite;
+
+    width: auto;
+  }
+} */
 
 /* edite */
 .Sidebar > * {
@@ -153,4 +166,26 @@
   isolation: isolate;
 }
 
+.dashMain {
+}
 /* styled header end */
+.dashMain > section {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover !important;
+  padding: 1rem;
+  margin: 2rem;
+}
+.dashMain > section.s2 {
+  background: linear-gradient(rgba(10, 10, 10, 0.884) 0 0),
+    url("../assets/bg2.png");
+  background-attachment: fixed;
+}
+.dashMain > section.s1 {
+  background: url("../assets/bg3.jpg");
+  background-attachment: fixed;
+}
+.dashMain > section.s3 {
+  background: url("../assets/bg1.jpg");
+  background-attachment: fixed;
+}

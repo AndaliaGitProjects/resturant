@@ -14,7 +14,7 @@ export default function Sidebar({ innerWidth }) {
         innerWidth < 600 && "sidebar-small"
       } flex row-gap-5 flex-d-column`}
     >
-      <ResturantInfo name={t("resturantWelcom")}></ResturantInfo>
+      {/* <ResturantInfo name={t("resturantWelcom")}></ResturantInfo> */}
 
       <ButtonSide to="./" title={t("sideNav.dashboard")}>
         <img src={DashIcon} height={26} alt="" /> {t("sideNav.dashboard")}

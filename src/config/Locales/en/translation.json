@@ -1,5 +1,8 @@
 {
   "nav": {
-    "dashboard": "dashboard"
+    "home": "home",
+    "dashboard": "dashboard",
+    "login": "Login",
+    "signup": "SignUp"
   }
 }

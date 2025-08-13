@@ -1,17 +1,10 @@
-import ToggleBottomIcon from "../assets/backIcon.svg"
-import useTranslate from "../hooks/useTranslate"
 import NavbarItemIcon from "./NavbarItemIcon"
 import NavbarItemIconSide from "./NavbarItemIconSide"
-export default function Navbar({ setToggleSideBar, toggleSideBar }) {
-  const { t } = useTranslate()
+export default function Navbar() {
   return (
     <nav className="Navbar flex flex-between flex-wrap background-secondary">
       <div className="flex flex-center column-gap-2 ">
-        <NavbarItemIconSide
-          setToggleSideBar={setToggleSideBar}
-          toggleSideBar={toggleSideBar}
-          image={ToggleBottomIcon}
-        ></NavbarItemIconSide>
+        <NavbarItemIconSide></NavbarItemIconSide>
       </div>
 
       <div className="flex flex-center column-gap-2 flex-wrap">

@@ -64,9 +64,6 @@
 
 :root[theme="glassyellowTow"] .Main {
   background: white;
-  margin: 0;
-  border: none;
-  border-radius: 0;
 }
 
 :root[theme="glassblue"] {
@@ -157,6 +154,7 @@ body,
 html,
 #root {
   min-height: 100%;
+  height: 100%;
 }
 
 #root,

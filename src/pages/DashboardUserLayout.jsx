@@ -1,15 +1,20 @@
-import { useEffect, useState } from "react"
-import { Main, Navbar, Sidebar } from "../components/MainComponents"
+import { createContext, useEffect, useState } from "react"
+import { Navbar, Sidebar } from "../components/MainComponents"
 import { Outlet } from "react-router"
-
+// eslint-disable-next-line react-refresh/only-export-components
+export const TOGGLE_SIDE = createContext()
 export default function DashboardUserLayout() {
-  const [toggleSideBar, setToggleSideBar] = useState(true)
   const [innerWidth, setWindowWidth] = useState(window.innerWidth)
+  const [toggleSideBar, setToggleSideBar] = useState(() => {
+    if (innerWidth >= 600) return true
+    else return false
+  })
 
   useEffect(() => {
-    if (innerWidth >= 600) {
-      setToggleSideBar(true)
-    } else setToggleSideBar(false)
+    if (innerWidth <= 600) {
+      setToggleSideBar(false)
+    }
+
     const ac = new AbortController()
     window.addEventListener(
       "resize",
@@ -18,20 +23,20 @@ export default function DashboardUserLayout() {
       },
       { signal: ac.signal }
     )
+
     return () => {
       ac.abort()
     }
   }, [innerWidth])
   return (
-    <div className="main-container flex flex-d-column h-100-vh">
-      <Navbar
-        setToggleSideBar={setToggleSideBar}
-        toggleSideBar={toggleSideBar}
-      ></Navbar>
-      <div className="wrapper flex flex-grow-1 ">
-        {toggleSideBar && <Sidebar innerWidth={innerWidth}></Sidebar>}
-        <Outlet />
+    <TOGGLE_SIDE.Provider value={{ toggleSideBar, setToggleSideBar }}>
+      <div className="main-container flex flex-d-column h-100-vh">
+        <Navbar></Navbar>
+        <div className="wrapper flex flex-grow-1 ">
+          {toggleSideBar && <Sidebar innerWidth={innerWidth}></Sidebar>}
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </TOGGLE_SIDE.Provider>
   )
 }
