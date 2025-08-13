@@ -1,0 +1,156 @@
+@import url("Reset.css");
+@import url("Utilites.css");
+
+* {
+  interpolate-size: allow-keywords;
+}
+/* buttons style */
+.main-button {
+  --transiton-button-speed: 0.4s;
+  display: flex;
+  align-items: center;
+  border: var(--border-botton);
+  border-radius: 0.4rem;
+  transition: all var(--transiton-button-speed);
+  background-color: var(--button-bg-color);
+  color: var(--Text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.nav-button {
+  padding: 0.3rem;
+  font-size: 1.05rem;
+}
+
+/* image navba */
+.nav-button > * {
+  min-height: 26px;
+  fill: var(--Text-Primary);
+}
+.main-button.danger-button:hover,
+.main-button.danger-button:focus-visible {
+  background-color: rgba(233, 63, 63, 0.705) !important;
+}
+
+.nav-sid-bottom-clicked {
+  transition: transform var(--transiton-button-speed);
+  transform: rotateY(180deg);
+  background-color: var(--button-active) !important;
+  -webkit-backdrop-filter: blur(0.05rem);
+  backdrop-filter: blur(0.2rem);
+}
+
+.side-button {
+  column-gap: 0.25rem;
+  padding-inline-start: 1rem !important;
+  transition: background-color var(--transiton-button-speed);
+}
+
+.side-button > img {
+  max-height: 27px;
+}
+.active,
+.main-button:hover,
+.main-button:focus-visible {
+  outline: 1px solid var(--Text-white) !important;
+  background-color: var(--button-active) !important;
+  transition: all var(--transiton-button-speed);
+  -webkit-backdrop-filter: blur(0.05rem);
+  backdrop-filter: blur(0.05rem);
+  color: var(--Text-Black) !important;
+}
+/* end button style */
+
+/* Dashborad Main Layout */
+
+.Navbar {
+  padding: 1rem;
+  border-bottom: var(--main-border);
+  background: var(--main-backgounrd);
+  background-size: cover;
+  background-size: 500px;
+  -webkit-backdrop-filter: blur(0.2rem);
+  backdrop-filter: blur(0.2rem);
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  /* backdrop-filter: blur(0.05rem); */
+
+  height: 0;
+  position: relative;
+}
+
+.wrapper > .Main {
+  padding: 0.6rem;
+
+  border: var(--main-border);
+  border-radius: 0.4rem;
+  overflow-y: scroll;
+  margin: 0.6rem;
+  width: min(100%, 1300px);
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+}
+
+.wrapper > .Sidebar {
+  width: min(260px, 100%);
+  flex-shrink: 0;
+
+  padding: 1rem;
+
+  border-inline-end: var(--main-border);
+
+  background: var(--main-backgounrd);
+  background-position: center;
+  background-size: 570px;
+
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-backdrop-filter: blur(0.2rem);
+  backdrop-filter: blur(0.2rem);
+}
+
+/* edite */
+.Sidebar > * {
+  padding: 0.35rem;
+}
+
+/* SideBar Samll  */
+.Sidebar.sidebar-small {
+  z-index: 1;
+  position: absolute;
+}
+
+.resturantInfo {
+  color: var(--Text-Black);
+  background: var(--resturant-info-bg);
+  /* background-color: white; */
+  border-radius: 0.4rem;
+  border: var(--border-botton);
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.resturantInfo-image {
+  aspect-ratio: 1/1;
+  height: 130px;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+}
+
+/* dash board End style */
+
+/* styled header */
+.styledHeader {
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+}
+
+/* styled header end */

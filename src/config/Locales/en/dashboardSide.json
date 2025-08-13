@@ -1,0 +1,9 @@
+{
+  "resturantWelcom": "Welcom ",
+  "sideNav": {
+    "dashboard": "Dashboard",
+    "catigores": "Catigores",
+    "setting": "Setting",
+    "menu": "Menu"
+  }
+}

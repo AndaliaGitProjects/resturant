@@ -1,0 +1,92 @@
+/* 
+:root {
+  --Primary-Color: #1e2f28; /* deeper green tone */
+  --Secondary-Color: #7a5c3f; /* muted warm accent */
+  --Text-Primary: #eaeaea;
+
+  --nutral-100: #f0f0f0;
+  --nutral-900: #121212;
+
+  --main-backgounrd: linear-gradient(rgb(30, 47, 40) 0 0),
+    url("../assets/prf.png");
+
+  --main-border-color: #d8d2d2;
+  --main-border: 0.5px solid var(--main-border-color);
+
+  --button-active: rgba(255, 255, 255, 0.3);
+  --button-border-color: #a18484;
+  --border-botton: 1px solid var(--button-border-color);
+
+  --font-family-Winky: "Winky Rough", sans-serif;
+}
+
+:root {
+  /* 🍅 Primary & Accent Colors */
+  --Primary-Color: #d94f30; /* Tomato red – appetite stimulant */
+  --Secondary-Color: #f4c95d; /* Warm mustard – cozy and inviting */
+
+  /* 🌿 Supporting Tones */
+  --Accent-Green: #4a785e; /* Herb green – freshness */
+  --Accent-Berry: #8e3b5a; /* Berry purple – richness and depth */
+
+  /* 🧁 Neutrals for Contrast */
+  --nutral-100: #2e1f27; /* Deep brown – elegant text */
+  --nutral-900: #fff8f0; /* Cream white – soft background */
+
+  /* ✨ UI Elements */
+  --button-active: rgba(255, 255, 255, 0.85);
+  --Text-Primary: var(--nutral-100);
+  --main-border-color: var(--Accent-Green);
+  --button-border-color: var(--Accent-Green);
+
+  /* 🌈 Background with Flavor */
+  --main-backgounrd: linear-gradient(
+      135deg,
+      var(--Primary-Color) 0%,
+      var(--Secondary-Color) 50%,
+      var(--Accent-Green) 100%
+    ),
+    url("../assets/prf.png");
+
+  --main-border: 2.5px solid var(--main-border-color);
+  --border-botton: 2px solid var(--button-border-color);
+
+  /* 🖋️ Typography */
+  --font-family-Winky: "Winky Rough", sans-serif;
+}
+
+:root {
+  /* 🍷 Elegant & Appetizing Core */
+  --Primary-Color: #8b2e3c; /* Wine red – rich and bold */
+  --Secondary-Color: #f2a65a; /* Apricot – warm and inviting */
+
+  /* 🌿 Fresh Accents */
+  --Accent-Green: #6bbf59; /* Basil green – fresh and organic */
+  --Accent-Cool: #4a6fa5; /* Slate blue – modern and calming */
+
+  /* 🧁 Neutrals for Balance */
+  --nutral-100: #1e1e1e; /* Charcoal – strong text */
+  --nutral-900: #fdfdfd; /* Pure white – clean background */
+
+  /* ✨ UI Elements */
+  --button-active: #f2a65a; /* Apricot – matches Secondary for warmth */
+  --Text-Primary: var(--nutral-100);
+  --main-border-color: var(--Accent-Cool);
+  --button-border-color: var(--Accent-Green);
+
+  /* 🌈 Background with Sophistication */
+  --main-backgounrd: linear-gradient(
+      135deg,
+      var(--Primary-Color) 0%,
+      var(--Secondary-Color) 50%,
+      var(--Accent-Cool) 100%
+    ),
+    url("../assets/prf.png");
+
+  --main-border: 2.5px solid var(--main-border-color);
+  --border-botton: 2px solid var(--button-border-color);
+
+  /* 🖋️ Typography */
+  --font-family-Winky: "Winky Rough", sans-serif;
+} 
+*/

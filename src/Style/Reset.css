@@ -1,0 +1,203 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Primary-Color: #4a785ee5;
+  --Secondary-Color: #dfaf7a;
+
+  --Text-Primary: #2e1f27;
+  --nutral-100: #000;
+  --nutral-900: #fff;
+
+  --main-border-color: var(--nutral-100);
+  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0),
+    url("../assets/prf.png");
+  --main-border: 2.5px solid var(--main-border-color);
+
+  --button-active: rgba(255, 255, 255, 0.678);
+  --button-border-color: var(--nutral-100);
+  --button-bg-color: var(--Secondary-Color);
+  --border-botton: 2px solid var(--button-border-color);
+
+  --resturant-info-bg: rgba(255, 255, 255, 0.678);
+
+  --scroll-color: var(--Secondary-Color);
+
+  --font-family-Winky: "Winky Rough", sans-serif;
+}
+
+:root[theme="glassyellow"] {
+  --Primary-Color: #37521d17;
+  --Secondary-Color: #dfae7a85;
+
+  --nutral-100: #0800018f;
+
+  --button-active: #fef324b6;
+  --nutral-900: url("../assets/bg2.png");
+  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
+
+  --scroll-color: black;
+}
+
+:root[theme="glassyellowTow"] {
+  --Primary-Color: rgba(255, 255, 255, 0.8);
+  --Secondary-Color: rgba(255, 174, 0, 0.473);
+
+  --nutral-100: #0800018f;
+
+  --button-active: #fef324b6;
+  --nutral-900: linear-gradient(
+      to top left,
+      var(--button-active),
+      rgba(212, 199, 83, 0.699),
+      rgb(255, 166, 0)
+    ),
+    url("../assets/prf.png");
+  --main-backgounrd: linear-gradient(rgba(196, 197, 104, 0.377) 0 0);
+
+  --scroll-color: black;
+}
+
+:root[theme="glassyellowTow"] .Main {
+  background: white;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+:root[theme="glassblue"] {
+  --Primary-Color: #1daef14d;
+  --Secondary-Color: #e3eaf1b2;
+
+  --nutral-100: #0800018f;
+  --nutral-900: url("../assets/bg3.jpg");
+
+  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
+  --button-border-color: rgba(0, 0, 0, 0.753);
+  --button-active: #1daef1d5;
+  --scroll-color: black;
+}
+
+:root[theme="glassgreen"] {
+  --Primary-Color: #1df1994d;
+  --Secondary-Color: #e3eaf1b2;
+
+  --nutral-100: #0800018f;
+  --nutral-900: url("../assets/bg4.png");
+
+  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
+  --button-border-color: rgba(0, 0, 0, 0.753);
+  --button-active: #1df175d5;
+  --scroll-color: black;
+}
+
+:root[theme="dark"] {
+  --Primary-Color: #1e1f20;
+  --Secondary-Color: rgba(255, 255, 255, 0.603);
+
+  --Text-Primary: white;
+  --nutral-100: #c4c7c5;
+  --nutral-900: #131314;
+
+  --main-border-color: #272727;
+
+  --button-active: rgba(255, 255, 255, 0.219);
+  --button-border-color: #7b7c49b7;
+  --button-bg-color: none;
+
+  --resturant-info-bg: radial-gradient(
+    circle at top,
+    rgb(255, 255, 255),
+    transparent
+  );
+  --scroll-color: white;
+}
+
+::view-transition-old(root) {
+  animation-delay: 500ms;
+}
+::view-transition-new(root) {
+  animation: circle-in 1s;
+}
+
+@keyframes circle-in {
+  from {
+    clip-path: circle(0% at 50% 0%);
+    opacity: 0;
+  }
+  to {
+    clip-path: circle(130% at 50% 0%);
+    opacity: 1;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-color);
+}
+
+/* Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+} */
+
+body,
+html,
+#root {
+  min-height: 100%;
+}
+
+#root,
+body {
+  line-height: 1.4;
+  color: var(--Text-Primary);
+}
+
+body {
+  background: var(--nutral-900);
+  background-position: center;
+  background-size: cover;
+  scroll-behavior: smooth;
+  font-family: var(--font-family-Winky, "Courier New", Courier, monospace);
+}
+
+image,
+img,
+svg,
+video {
+  max-width: 100%;
+  /* max-height: 100%; */
+}
+
+input,
+button,
+textarea,
+select,
+option {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Text-Primary);
+}
+
+hr.custom {
+  padding: 0 !important;
+  margin: 0;
+  height: 0.1225rem;
+  background-color: var(--nutral-100);
+  border: none;
+}
