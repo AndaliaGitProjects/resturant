@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react"
 import { Navbar, Sidebar } from "../components/MainComponents"
 import { Outlet } from "react-router"
-// eslint-disable-next-line react-refresh/only-export-components
 export const TOGGLE_SIDE = createContext()
 export default function DashboardUserLayout() {
   const [innerWidth, setWindowWidth] = useState(window.innerWidth)
@@ -31,10 +30,12 @@ export default function DashboardUserLayout() {
   return (
     <TOGGLE_SIDE.Provider value={{ toggleSideBar, setToggleSideBar }}>
       <div className="main-container flex flex-d-column h-100-vh">
-        <Navbar></Navbar>
         <div className="wrapper flex flex-grow-1 ">
           {toggleSideBar && <Sidebar innerWidth={innerWidth}></Sidebar>}
-          <Outlet />
+          <div className="flex flex-d-column flex-grow-1">
+            <Navbar></Navbar>
+            <Outlet />
+          </div>
         </div>
       </div>
     </TOGGLE_SIDE.Provider>

@@ -9,6 +9,7 @@ export default function ThemeSelector() {
     "glassgreen",
     "glassyellow",
     "glassyellowTow",
+    "regular",
   ]
 
   return (

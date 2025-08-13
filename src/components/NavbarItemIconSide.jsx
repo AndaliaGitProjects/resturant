@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { TOGGLE_SIDE } from "../pages/DashboardUserLayout"
-export default function NavbarItemIconSide() {
+export default function NavbarItemIconSide({ className = "" }) {
   const { toggleSideBar, setToggleSideBar } = useContext(TOGGLE_SIDE)
   // const buttonRef = useRef(null)
 
@@ -18,7 +18,7 @@ export default function NavbarItemIconSide() {
   return (
     <button
       // ref={buttonRef}
-      className={`main-button nav-button  ${
+      className={`main-button nav-button ${className === "side" && "side"}  ${
         toggleSideBar && "nav-sid-bottom-clicked"
       }`}
       onClick={() => setToggleSideBar((val) => !val)}

@@ -10,6 +10,7 @@ import DashboardUserLayout from "./pages/DashboardUserLayout"
 import Main from "./pages/Main"
 import Catigores from "./pages/Categories"
 import Setting from "./pages/Setting"
+import AccountSetting from "./pages/AccountSetting"
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
           { index: true, element: <Main></Main> },
           { path: "catigores", element: <Catigores></Catigores> },
           { path: "setting", element: <Setting></Setting> },
+          { path: "profile", element: <AccountSetting></AccountSetting> },
         ],
       },
       { path: "*", element: <h1>Page not Found 404</h1> },

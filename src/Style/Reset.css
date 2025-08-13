@@ -91,6 +91,14 @@
   --button-active: #1df175d5;
   --scroll-color: black;
 }
+:root[theme="regular"] {
+  --Primary-Color: #1f1f2b;
+  --Secondary-Color: #e3eaf1b2;
+  --Text-Primary: black;
+
+  --button-active: #1df1757c;
+  --scroll-color: black;
+}
 
 :root[theme="dark"] {
   --Primary-Color: #1e1f20;
@@ -124,11 +132,9 @@
 @keyframes circle-in {
   from {
     clip-path: circle(0% at 50% 0%);
-    opacity: 0;
   }
   to {
     clip-path: circle(130% at 50% 0%);
-    opacity: 1;
   }
 }
 

@@ -4,6 +4,7 @@ import CatigoresIcon from "../assets/shop-svgrepo-com.svg"
 import ResturantMenuIcon from "../assets/restaurant-menu-svgrepo-com.svg"
 import ButtonSide from "./ButtonSide"
 import ResturantInfo from "./ResturantInfo"
+import NavbarItemIconSide from "./NavbarItemIconSide"
 import useTranslate from "../hooks/useTranslate"
 export default function Sidebar({ innerWidth }) {
   const { t } = useTranslate()
@@ -15,7 +16,9 @@ export default function Sidebar({ innerWidth }) {
       } flex row-gap-5 flex-d-column`}
     >
       {/* <ResturantInfo name={t("resturantWelcom")}></ResturantInfo> */}
-
+      {innerWidth < 600 && (
+        <NavbarItemIconSide className="side"></NavbarItemIconSide>
+      )}
       <ButtonSide to="./" title={t("sideNav.dashboard")}>
         <img src={DashIcon} height={26} alt="" /> {t("sideNav.dashboard")}
       </ButtonSide>
