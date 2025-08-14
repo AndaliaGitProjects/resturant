@@ -4,6 +4,7 @@ import CatigoresIcon from "../assets/shop-svgrepo-com.svg"
 import ResturantMenuIcon from "../assets/restaurant-menu-svgrepo-com.svg"
 import ButtonSide from "./ButtonSide"
 import ResturantInfo from "./ResturantInfo"
+import ButtonAccordionSide from "./ButtonAccordionSide"
 import NavbarItemIconSide from "./NavbarItemIconSide"
 import useTranslate from "../hooks/useTranslate"
 export default function Sidebar({ innerWidth }) {
@@ -28,14 +29,16 @@ export default function Sidebar({ innerWidth }) {
         {t("sideNav.catigores")}
       </ButtonSide>
 
-      <ButtonSide to="menu" title={t("sideNav.menu")}>
+      {/* <ButtonSide to="menu" title={t("sideNav.menu")}>
         <img src={ResturantMenuIcon} alt="" />
         {t("sideNav.menu")}
-      </ButtonSide>
+      </ButtonSide> */}
       <ButtonSide to="setting" title={t("sideNav.setting")}>
         <img src={SettingIcon} alt="" />
         {t("sideNav.setting")}
       </ButtonSide>
+
+      <ButtonAccordionSide></ButtonAccordionSide>
     </aside>
   )
 }

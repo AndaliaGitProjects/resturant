@@ -18,6 +18,9 @@
   font-weight: 500;
 }
 
+.main-button img {
+  height: 26px;
+}
 .nav-button {
   padding: 0.3rem;
   font-size: 1.05rem;
@@ -32,6 +35,8 @@
   min-height: 26px;
   fill: var(--Text-Primary);
 }
+
+.main-button.danger-button.active,
 .main-button.danger-button:hover,
 .main-button.danger-button:focus-visible {
   background-color: rgba(233, 63, 63, 0.705) !important;
@@ -64,6 +69,119 @@
   backdrop-filter: blur(0.05rem);
   color: var(--Text-Black) !important;
 }
+
+/* .accourdion-button {
+  background-color: var(--button-bg-color);
+  color: var(--Text-primary);
+  border: var(--border-botton);
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.accourdion-button img {
+  max-height: 27px;
+}
+.accurdion-arrow {
+  transition: all 0.4s;
+  fill: var(--Text-Primary);
+}
+.accurdion-arrow.open {
+  rotate: 0.5turn;
+  transition: all 0.4s;
+  transform-origin: 50% 40%;
+}
+ul.accourdionBody {
+  text-align: start;
+  overflow: hidden;
+  list-style: none;
+  height: 0;
+  transition: all 0.4s;
+  row-gap: 0.4rem;
+}
+
+ul.accourdionBody.open {
+  transition: all 0.4s;
+  height: auto !important;
+  margin: 0.3rem;
+  /* padding: 0.5rem!imortant; 
+}
+ul.accourdionBody > li {
+  border: var(--border-botton);
+  background-color: var(--button-bg-color);
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-inline-start: 1rem !important;
+}
+ul.accourdionBody img {
+  max-height: 23px;
+} */
+
+/* accordion Side */
+.accodrion {
+  background-color: var();
+  border: var(--border-botton);
+  border-radius: 0.4rem;
+  transition: all var(--transiton-button-speed);
+  background-color: var(--button-bg-color);
+  color: var(--Text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 !important;
+}
+.accodrionHeader {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+.accodrionHeader > .arrow {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  transition: all 0.4s;
+  fill: var(--Text-Primary);
+}
+
+.arrow.open {
+  rotate: -0.5turn;
+  transition: all 0.4s;
+  transform-origin: 50% 45%;
+}
+
+.accodrionBody {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.accodrionBody > * {
+  padding: 0.3rem;
+  border: var(--border-botton);
+}
+.accodrionBody > *:hover,
+.accodrionBody > *:focus-visible {
+  outline: 1px solid gray !important;
+  background: var(--button-active) !important;
+  transition: transform var(--transiton-button-speed);
+  -webkit-backdrop-filter: blur(0.05rem);
+  backdrop-filter: blur(0.05rem);
+}
+
+.accodrionBody.open {
+  height: auto;
+  transition: all 0.4s;
+  padding: 1rem;
+}
+/* accordion Side end */
+
 /* end button style */
 
 /* Dashborad Main Layout */
@@ -95,6 +213,8 @@
   margin: 0.6rem;
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
+  width: min(calc(100% - 1.2rem), 1080px);
+  margin-inline: auto;
   flex-grow: 1;
 }
 

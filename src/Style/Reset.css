@@ -1,9 +1,11 @@
+@import url("Theme.css");
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  word-break: break-all;
 }
 :root {
   --Primary-Color: #4a785ee5;
@@ -28,98 +30,6 @@
   --scroll-color: var(--Secondary-Color);
 
   --font-family-Winky: "Winky Rough", sans-serif;
-}
-
-:root[theme="glassyellow"] {
-  --Primary-Color: #37521d17;
-  --Secondary-Color: #dfae7a85;
-
-  --nutral-100: #0800018f;
-
-  --button-active: #fef324b6;
-  --nutral-900: url("../assets/bg2.png");
-  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
-
-  --scroll-color: black;
-}
-
-:root[theme="glassyellowTow"] {
-  --Primary-Color: rgba(255, 255, 255, 0.8);
-  --Secondary-Color: rgba(255, 174, 0, 0.473);
-
-  --nutral-100: #0800018f;
-
-  --button-active: #fef324b6;
-  --nutral-900: linear-gradient(
-      to top left,
-      var(--button-active),
-      rgba(212, 199, 83, 0.699),
-      rgb(255, 166, 0)
-    ),
-    url("../assets/prf.png");
-  --main-backgounrd: linear-gradient(rgba(196, 197, 104, 0.377) 0 0);
-
-  --scroll-color: black;
-}
-
-:root[theme="glassyellowTow"] .Main {
-  background: white;
-}
-
-:root[theme="glassblue"] {
-  --Primary-Color: #1daef14d;
-  --Secondary-Color: #e3eaf1b2;
-
-  --nutral-100: #0800018f;
-  --nutral-900: url("../assets/bg3.jpg");
-
-  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
-  --button-border-color: rgba(0, 0, 0, 0.753);
-  --button-active: #1daef1d5;
-  --scroll-color: black;
-}
-
-:root[theme="glassgreen"] {
-  --Primary-Color: #1df1994d;
-  --Secondary-Color: #e3eaf1b2;
-
-  --nutral-100: #0800018f;
-  --nutral-900: url("../assets/bg4.png");
-
-  --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
-  --button-border-color: rgba(0, 0, 0, 0.753);
-  --button-active: #1df175d5;
-  --scroll-color: black;
-}
-:root[theme="regular"] {
-  --Primary-Color: #1f1f2b;
-  --Secondary-Color: #e3eaf1b2;
-  --Text-Primary: black;
-
-  --button-active: #1df1757c;
-  --scroll-color: black;
-}
-
-:root[theme="dark"] {
-  --Primary-Color: #1e1f20;
-  --Secondary-Color: rgba(255, 255, 255, 0.603);
-
-  --Text-Primary: white;
-  --nutral-100: #c4c7c5;
-  --nutral-900: #131314;
-
-  --main-border-color: #272727;
-
-  --button-active: rgba(255, 255, 255, 0.219);
-  --button-border-color: #7b7c49b7;
-  --button-bg-color: none;
-
-  --resturant-info-bg: radial-gradient(
-    circle at top,
-    rgb(255, 255, 255),
-    transparent
-  );
-  --scroll-color: white;
 }
 
 ::view-transition-old(root) {
