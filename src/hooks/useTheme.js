@@ -8,9 +8,7 @@ export default function useTheme(defaultTheme = "default") {
   useEffect(() => {
     const root = document.documentElement
 
-    // Remove any existing theme classes
     if (theme == root.getAttribute("theme")) return
-    // else {
     if (document.startViewTransition)
       document.startViewTransition(() => {
         root.setAttribute("theme", "")

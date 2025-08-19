@@ -1,6 +1,6 @@
 import StyledHeader from "../components/StyledHeader"
 // import useTranslate from "../hooks/useTranslate"
-import { LangContext } from "../components/HomeNavbar"
+import { LangContext } from "../layout/HomeNavbarLayout"
 import { useContext } from "react"
 import ThemeSelector from "../components/ThemeSelector"
 export default function Setting() {

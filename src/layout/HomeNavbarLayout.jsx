@@ -5,9 +5,8 @@ import ThemeSelector from "../components/ThemeSelector"
 export const LANG_DISPLAY = "LANG_DISPLAY"
 // eslint-disable-next-line react-refresh/only-export-components
 export const LangContext = createContext()
-export function HomeNavbar() {
+export function HomeNavbarLayout() {
   const { t, lang, cl } = useTranslate()
-
   return (
     <LangContext.Provider value={{ lang, cl, t }}>
       <div
@@ -28,9 +27,9 @@ export function HomeNavbar() {
             <li>
               <NavLink to="/signup">{t("nav.signup")}</NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink to="/team">Team</NavLink>
-            </li> */}
+            </li>
             <li>
               <NavLink to="/userdashboard">{t("nav.dashboard")}</NavLink>
             </li>
@@ -54,6 +53,7 @@ export function HomeNavbar() {
           </ul>
         </nav>
       </div>
+
       <Outlet></Outlet>
     </LangContext.Provider>
   )

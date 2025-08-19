@@ -1,7 +1,6 @@
 import { useState } from "react"
-import Icon from "../assets/shop-svgrepo-com.svg"
 import { NavLink } from "react-router"
-export default function ButtonAccordionSide() {
+export default function ButtonAccordionSide({ children }) {
   const [accordionOpen, setAccordionOpen] = useState(false)
 
   return (
@@ -11,10 +10,7 @@ export default function ButtonAccordionSide() {
           className="accodrionHeader main-button side-button"
           onClick={() => setAccordionOpen((val) => !val)}
         >
-          <div className="flex flex-center column-gap-2">
-            <img src={Icon} alt="" />
-            <div>hello</div>
-          </div>
+          <div className="flex flex-center column-gap-2">{children}</div>
           <button className={`arrow  ${accordionOpen && "open"}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

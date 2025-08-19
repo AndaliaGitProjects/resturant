@@ -4,7 +4,7 @@ export default function Login() {
       className="flex flex-grow-1 flex-center"
       style={{ background: "darkgreen" }}
     >
-      Login
+      Login asdsad
     </div>
   )
 }

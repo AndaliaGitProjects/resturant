@@ -1,28 +1,22 @@
-import { NavLink } from "react-router"
-import { Link } from "react-router"
+import { NavLink, useLoaderData, useNavigation } from "react-router"
 import { Outlet } from "react-router"
-
+// import TM from "../test.json"
 export default function TeamNavbar() {
+  const TM = useLoaderData()
+  const { state } = useNavigation()
   return (
     <>
       <ul style={{ background: "yellow" }}>
-        <li>
-          <NavLink to="/team/ali">Team - Ali</NavLink>
-        </li>
-        <li>
-          <NavLink to="moh">Team - moh</NavLink>
-        </li>
-        <li>
-          <NavLink to="..">.. Router</NavLink>
-        </li>
-        <li>
-          <NavLink to=".." end>
-            .. path
-          </NavLink>
-        </li>
+        {TM.map((team) => {
+          return (
+            <li key={team.id}>
+              <NavLink to={String(team.id)}>Team - {team.name}</NavLink>
+            </li>
+          )
+        })}
       </ul>
 
-      <Outlet context="testOutletContext"></Outlet>
+      {state === "loading" ? "loading" : <Outlet></Outlet>}
     </>
   )
 }

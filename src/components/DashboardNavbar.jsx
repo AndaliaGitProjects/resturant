@@ -1,6 +1,6 @@
 import NavbarItemIcon from "./NavbarItemIcon"
 import NavbarItemIconSide from "./NavbarItemIconSide"
-export default function Navbar() {
+export default function DashboardNavbar() {
   return (
     <nav className="Navbar flex flex-between flex-center flex-wrap background-secondary">
       <div className="flex flex-center  column-gap-2 ">

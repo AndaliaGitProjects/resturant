@@ -160,6 +160,7 @@ ul.accourdionBody img {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  opacity: 0;
 }
 
 .accodrionBody > * {
@@ -177,8 +178,10 @@ ul.accourdionBody img {
 
 .accodrionBody.open {
   height: auto;
-  transition: all 0.4s;
+  opacity: 1;
   padding: 1rem;
+
+  transition: all 0.4s;
 }
 /* accordion Side end */
 
@@ -266,16 +269,41 @@ ul.accourdionBody img {
   /* background-color: white; */
   border-radius: 0.4rem;
   border: var(--border-botton);
-  font-size: 1.1rem;
   text-align: center;
   font-weight: bold;
+  max-height: 150px;
+  gap: 1rem;
+  position: relative;
+  display: flex;
 }
 
 .resturantInfo-image {
-  aspect-ratio: 1/1;
-  height: 130px;
   mix-blend-mode: multiply;
+  justify-self: center;
+  align-self: center;
+  height: 70%;
+  width: 100%;
   object-fit: contain;
+}
+.resturantInfo-title {
+  --vert-radius: 8px;
+  font-size: 0.8rem;
+  position: absolute;
+  inset-inline-start: 0px;
+  inset-block-start: 0px;
+  padding: 0.3rem;
+  background-color: var(--Secondary-Color);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - var(--vert-radius)),
+    calc(100% - var(--vert-radius)) 100%,
+    0% 100%,
+    0% var(--vert-radius)
+  );
+  direction: ltr;
+  z-index: 1;
+  isolation: isolate;
 }
 
 /* dash board End style */

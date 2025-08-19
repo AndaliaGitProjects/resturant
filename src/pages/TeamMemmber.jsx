@@ -1,10 +1,14 @@
-import { useOutletContext } from "react-router"
-
-export default function TeamMemmber({ name }) {
+import { useLoaderData, useOutletContext } from "react-router"
+import TM from "../test.json"
+export default function TeamMemmber() {
+  const member = useLoaderData()
+  // const { userId } = useParams()
+  // const memmber = data.find((e) => e.id === Number(userId))
   const value = useOutletContext()
   return (
     <div>
-      TeamMemmber - {name} - {value}
+      {/* {typeof userId} */}
+      TeamMemmber - {value} {member.name}
     </div>
   )
 }

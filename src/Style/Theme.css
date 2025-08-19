@@ -7,12 +7,13 @@
   --button-active: #fef324b6;
   --nutral-900: url("../assets/bg2.png");
   --main-backgounrd: linear-gradient(var(--Primary-Color) 0 0);
+  --resturant-info-bg: white;
 
   --scroll-color: black;
 }
 
 :root[theme="glassyellowTow"] {
-  --Primary-Color: rgba(255, 255, 255, 0.8);
+  --Primary-Color: rgba(248, 138, 105, 0.8);
   --Secondary-Color: rgba(255, 174, 0, 0.473);
 
   --nutral-100: #0800018f;
@@ -26,7 +27,7 @@
     ),
     url("../assets/prf.png");
   --main-backgounrd: linear-gradient(rgba(196, 197, 104, 0.377) 0 0);
-
+  --resturant-info-bg: white;
   --scroll-color: black;
 }
 

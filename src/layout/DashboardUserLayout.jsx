@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react"
-import { Navbar, Sidebar } from "../components/MainComponents"
+import Sidebar from "../components/Sidebar"
+import DashboardNavbar from "../components/DashboardNavbar"
 import { Outlet } from "react-router"
+// eslint-disable-next-line react-refresh/only-export-components
 export const TOGGLE_SIDE = createContext()
 export default function DashboardUserLayout() {
   const [innerWidth, setWindowWidth] = useState(window.innerWidth)
@@ -33,7 +35,7 @@ export default function DashboardUserLayout() {
         <div className="wrapper flex flex-grow-1 ">
           {toggleSideBar && <Sidebar innerWidth={innerWidth}></Sidebar>}
           <div className="flex flex-d-column flex-grow-1">
-            <Navbar></Navbar>
+            <DashboardNavbar></DashboardNavbar>
             <Outlet />
           </div>
         </div>

@@ -11,7 +11,7 @@ import dashboardNavAr from "./Locales/ar/dashboardNav.json"
 import dashboardSideEn from "./Locales/en/dashboardSide.json"
 import dashboardSideAr from "./Locales/ar/dashboardSide.json"
 
-import { LANG_DISPLAY } from "../components/HomeNavbar"
+import { LANG_DISPLAY } from "../layout/HomeNavbarLayout"
 
 const value = JSON.parse(localStorage.getItem("LANG_DISPLAY"))
 

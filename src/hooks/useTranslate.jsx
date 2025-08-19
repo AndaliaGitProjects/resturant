@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
-import { LANG_DISPLAY } from "../components/HomeNavbar"
+import { LANG_DISPLAY } from "../layout/HomeNavbarLayout"
 import i18n from "../config/i18n"
 
 export default function useTranslate() {
