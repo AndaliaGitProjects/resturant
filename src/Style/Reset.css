@@ -7,6 +7,10 @@
   padding: 0;
   word-break: break-all;
 }
+dialog {
+  margin: revert;
+  padding: revert;
+}
 :root {
   --Primary-Color: #4a785ee5;
   --Secondary-Color: #dfaf7a;
@@ -31,8 +35,33 @@
 
   --font-family-Winky: "Winky Rough", sans-serif;
 }
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --Primary-Color: #1e1f20;
+    --Secondary-Color: rgba(255, 255, 255, 0.603);
+
+    --Text-Primary: white;
+    --nutral-100: #c4c7c5;
+    --nutral-900: #131314;
+
+    --main-border-color: #272727;
+
+    --button-active: rgba(255, 255, 255, 0.219);
+    --button-border-color: #7b7c49b7;
+    --button-bg-color: none;
+
+    --resturant-info-bg: radial-gradient(
+      circle at top,
+      rgb(255, 255, 255),
+      transparent
+    );
+    --scroll-color: white;
+  }
+} */
 
 ::view-transition-old(root) {
+  animation: circle-out 0.5s;
   animation-delay: 500ms;
 }
 ::view-transition-new(root) {
@@ -40,13 +69,60 @@
 }
 
 @keyframes circle-in {
-  from {
+  /* from {
     clip-path: circle(0% at 50% 0%);
   }
   to {
     clip-path: circle(130% at 50% 0%);
+  } */
+  0% {
+    scale: 0;
+    opacity: 0;
+    top: -100%;
+  }
+  50% {
+    top: 0;
+    scale: 0.5;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    scale: 1;
+    opacity: 1;
+    border-radius: 100%;
   }
 }
+
+@keyframes circle-out {
+  0% {
+    top: 0;
+    scale: 1;
+  }
+  50% {
+    bottom: 0;
+    scale: 0.5;
+  }
+
+  100% {
+    scale: 0;
+    top: 100%;
+  }
+}
+/* 0%{scale: 0;
+    opacity: 0;
+    top: -100%;
+  }
+  50% {
+    top: 0;
+    scale: 0.5;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    scale: 1;
+    opacity: 1;
+    border-radius: 100%;
+  } */
 
 /* Track */
 ::-webkit-scrollbar {

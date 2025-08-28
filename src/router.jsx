@@ -1,7 +1,12 @@
-import { createBrowserRouter, Navigate, redirect } from "react-router-dom"
+import {
+  createBrowserRouter,
+  Navigate,
+  redirect,
+  useRouteError,
+} from "react-router-dom"
 
 import Home from "./pages/Home"
-import Login from "./pages/Login"
+import { loginRoute } from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import TeamMemmber from "./pages/TeamMemmber"
 import Team from "./pages/Team"
@@ -13,11 +18,12 @@ import AccountSetting from "./pages/AccountSetting"
 
 import TeamNavbar from "./components/TeamNavbar"
 import { HomeNavbarLayout } from "./layout/HomeNavbarLayout"
+import AdminDashboard from "./layout/AdminDashboard"
 
 const router = createBrowserRouter([
   {
     element: <HomeNavbarLayout></HomeNavbarLayout>,
-
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/userdashboard",
@@ -30,7 +36,10 @@ const router = createBrowserRouter([
           { path: "profile", element: <AccountSetting></AccountSetting> },
         ],
       },
-      // { path: "*", element: <h1>Page not Found 404</h1> },
+      {
+        path: "admindashboard",
+        element: <AdminDashboard />,
+      },
       {
         path: "*",
         element: (
@@ -42,7 +51,7 @@ const router = createBrowserRouter([
       },
 
       { path: "/", element: <Home></Home> },
-      { path: "/login", element: <Login></Login>, errorElement: <>Error</> },
+      { path: "/login", ...loginRoute },
       { path: "/signup", element: <SignUp></SignUp> },
       {
         path: "/team",
@@ -73,5 +82,20 @@ const router = createBrowserRouter([
     ],
   },
 ])
+
+// eslint-disable-next-line react-refresh/only-export-components
+function Error() {
+  const err = useRouteError()
+  console.log(err)
+  return (
+    <>
+      {/* 503 Service Unavailable */}
+      <div>somthing went wrong</div>
+      {err.message} - {err.name} - {err.code}
+      <br />
+      <pre>{err.stack}</pre>
+    </>
+  )
+}
 
 export default router

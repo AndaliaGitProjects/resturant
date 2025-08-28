@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 import { LANG_DISPLAY } from "../layout/HomeNavbarLayout"
+// eslint-disable-next-line no-unused-vars
 import i18n from "../config/i18n"
-
 export default function useTranslate() {
   const { t, i18n } = useTranslation()
   const [lang, setLang] = useState(() => {
@@ -21,5 +21,5 @@ export default function useTranslate() {
     setLang(e)
     i18n.changeLanguage(e)
   }
-  return { t, lang, cl }
+  return { translate: t, language: lang, changeLanguage: cl }
 }

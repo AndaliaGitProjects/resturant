@@ -4,6 +4,8 @@ export default function Main() {
   return (
     <main className="Main dashMain">
       <StyledHeader>Dashboard</StyledHeader>
+
+      <button className="redred">hi</button>
       <section className="s1">
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo suscipit,

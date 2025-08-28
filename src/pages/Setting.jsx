@@ -5,23 +5,21 @@ import { useContext } from "react"
 import ThemeSelector from "../components/ThemeSelector"
 export default function Setting() {
   // const { lang, cl } = useTranslate()
-  const { lang, cl, themess } = useContext(LangContext)
+  const { language, changeLanguage } = useContext(LangContext)
   return (
     <div className="Main">
       <StyledHeader>Setting</StyledHeader>
       <select
-        name=""
-        id=""
-        value={lang}
+        value={language}
         onChange={(e) => {
-          cl(e.target.value)
+          changeLanguage(e.target.value)
         }}
       >
         <option value="en">🚲 English</option>
         <option value="ar"> Arabic</option>
       </select>
 
-      <ThemeSelector themess={themess}></ThemeSelector>
+      <ThemeSelector></ThemeSelector>
     </div>
   )
 }

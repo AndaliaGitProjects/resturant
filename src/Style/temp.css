@@ -1,0 +1,7 @@
+.from_error > input {
+  border: 2px solid red;
+  color: red;
+}
+.error {
+  color: red;
+}

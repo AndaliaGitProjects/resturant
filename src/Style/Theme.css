@@ -20,12 +20,12 @@
 
   --button-active: #fef324b6;
   --nutral-900: linear-gradient(
-      to top left,
-      rgba(211, 196, 62, 0.938),
-      rgba(255, 166, 0, 0.938),
-      rgba(255, 0, 0, 0.705)
-    ),
-    url("../assets/prf.png");
+    to top left,
+    rgba(211, 196, 62, 0.938),
+    rgba(255, 166, 0, 0.651),
+    rgba(255, 0, 0, 0.568)
+  );
+  /* url("../assets/prf.png"); */
   --main-backgounrd: linear-gradient(rgba(196, 197, 104, 0.377) 0 0);
   --resturant-info-bg: white;
   --scroll-color: black;

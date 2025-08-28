@@ -11,17 +11,18 @@ export default function useTheme(defaultTheme = "default") {
     if (theme == root.getAttribute("theme")) return
     if (document.startViewTransition)
       document.startViewTransition(() => {
-        root.setAttribute("theme", "")
-        if (theme !== "default") {
-          root.setAttribute("theme", theme)
-        }
-      })
-    else {
-      root.setAttribute("theme", "")
-      if (theme !== "default") {
         root.setAttribute("theme", theme)
-      }
-    }
+      })
+    else root.setAttribute("theme", theme)
+    //     // root.setAttribute("theme", "")
+    //     // if (theme !== "default") {
+    //     // }
+    //   })
+    // else {
+    // root.setAttribute("theme", "")
+    // if (theme !== "default") {
+    // }
+    // }
     // }
     localStorage.setItem("theme", theme)
   }, [theme])

@@ -1,5 +1,19 @@
 @import url("Reset.css");
 @import url("Utilites.css");
+@import url("temp.css");
+dialog {
+}
+dialog[open] {
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0); /* Start transparent */
+  transition: background-color 0.3s ease-in-out;
+}
+
+dialog[open]::backdrop {
+  /* Apply styles when dialog is open */
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 * {
   interpolate-size: allow-keywords;

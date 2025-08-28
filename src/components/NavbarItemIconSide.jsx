@@ -2,22 +2,8 @@ import { useContext } from "react"
 import { TOGGLE_SIDE } from "../layout/DashboardUserLayout"
 export default function NavbarItemIconSide({ className = "" }) {
   const { toggleSideBar, setToggleSideBar } = useContext(TOGGLE_SIDE)
-  // const buttonRef = useRef(null)
-
-  // useEffect(() => {
-  //   function handleClickOutside(event) {
-  //     if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-  //       setToggleSideBar(false)
-  //     }
-  //   }
-  //   document.addEventListener("click", handleClickOutside, true)
-  //   return () => {
-  //     document.removeEventListener("click", handleClickOutside, true)
-  //   }
-  // }, [setToggleSideBar])
   return (
     <button
-      // ref={buttonRef}
       className={`main-button nav-button ${className === "side" && "side"}  ${
         toggleSideBar && "nav-sid-bottom-clicked"
       }`}
